@@ -1,0 +1,7 @@
+export { default as ContactHero } from './ContactHero'
+export { default as ContactInfoCards } from './ContactInfoCards'
+export { default as ContactForm } from './ContactForm'
+export { default as ContactFaq } from './ContactFaq'
+export { default as ContactSocial } from './ContactSocial'
+export { default as ContactMap } from './ContactMap'
+export { default as ContactCta } from './ContactCta'
