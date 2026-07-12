@@ -121,7 +121,9 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                     href={`/brands/${brand._id}`}
                                     className="group"
                                 >
-                                    <div className="bg-[#e6e6e6] shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff] rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] hover:-translate-y-1">
+                                    <div className="bg-[#e6e6e6] rounded-2xl overflow-hidden transition-all duration-300
+                                        shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff]
+                                        hover:shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] hover:-translate-y-1">
                                         {/* Image Container */}
                                         <div className="relative aspect-square bg-[#e6e6e6] m-3 rounded-xl p-4 sm:p-6
                                             shadow-[inset_4px_4px_8px_rgba(0,0,0,0.08),inset_-4px_-4px_8px_rgba(255,255,255,0.7)]">
@@ -137,7 +139,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                         
                                         {/* Brand Name */}
                                         <div className="p-3 sm:p-4 text-center">
-                                            <h3 className="font-semibold text-gray-800 text-sm sm:text-base truncate group-hover:text-violet-600 transition-colors">
+                                            <h3 className="font-semibold text-[#06188a] text-sm sm:text-base truncate group-hover:text-violet-600 transition-colors">
                                                 {brand.name}
                                             </h3>
                                             <p className="text-xs text-gray-400 mt-1 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -202,7 +204,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                             shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff]">
                             <FontAwesomeIcon icon={faTags} className="h-10 w-10 text-gray-400" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2">No brands found</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">No brands found</h3>
                         <p className="text-gray-500 mb-4">
                             {searchQuery 
                                 ? `No brands match "${searchQuery}"`
@@ -227,7 +229,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                     <div className="mt-12">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="w-1.5 h-8 bg-violet-500/60 rounded-full"></div>
-                            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
+                            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
                                 Featured <span className="text-violet-600">Brands</span>
                             </h2>
                         </div>
@@ -253,7 +255,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                             />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <h3 className="font-bold text-gray-800 text-base truncate">
+                                            <h3 className="font-bold text-[#0f15af] text-base truncate">
                                                 {brand.name}
                                             </h3>
                                             <p className="text-violet-600 text-sm mt-0.5">
