@@ -55,7 +55,7 @@ export default function Footer() {
                             </a>
                             <div className="flex items-start gap-3 text-sm text-gray-400">
                                 <FontAwesomeIcon icon={faLocationDot} className="text-emerald-500 mt-0.5" />
-                                <span>123 Commerce Street, Cairo, Egypt</span>
+                                <span>5 Al-Gumhuriya Street, Cairo, Egypt</span>
                             </div>
                         </div>
                     </div>

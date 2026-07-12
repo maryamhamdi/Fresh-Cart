@@ -38,7 +38,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
             <div className="bg-[#e6e6e6] py-10 sm:py-14 shadow-[inset_0_-6px_12px_rgba(0,0,0,0.04)]">
                 <div className="container mx-auto px-4">
                     <h1 className="flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
-                        <span className="h-10 w-10 sm:h-12 sm:w-12 bg-[#e6e6e6]  rounded-xl flex items-center justify-center  shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff]">
+                        <span className="h-10 w-10 sm:h-12 sm:w-12 bg-[#e6e6e6] rounded-xl flex items-center justify-center shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff]">
                             <FontAwesomeIcon icon={faTags} className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-600" />
                         </span>
                         Shop by Brand
@@ -51,10 +51,10 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
 
             <div className="container mx-auto px-4 py-8 sm:py-12">
                 {/* Stats Bar & Search */}
-                <div className="bg-[#e6e6e6] rounded-2xl  shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff] border border-gray-100 p-4 sm:p-6 mb-8">
+                <div className="bg-[#e6e6e6] rounded-2xl shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff] p-4 sm:p-6 mb-8">
                     <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
                         <div className="flex items-center gap-3">
-                            <div className="h-12 w-12 bg-violet-100  shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff] rounded-xl flex items-center justify-center">
+                            <div className="h-12 w-12 bg-[#e6e6e6] shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff] rounded-xl flex items-center justify-center">
                                 <FontAwesomeIcon icon={faStore} className="h-6 w-6 text-violet-600" />
                             </div>
                             <div>
@@ -77,7 +77,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                     placeholder="Search brands..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-11 pr-4 py-2.5 border border-gray-200 rounded-xl bg-[#e6e6e6]
+                                    className="w-full pl-11 pr-4 py-2.5 rounded-xl bg-[#e6e6e6]
                                 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-4px_-4px_8px_rgba(255,255,255,0.9)]
                                 outline-none text-sm"
                                 />
@@ -85,7 +85,7 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
 
                             {/* View Mode Toggle */}
                             <div className="flex items-center gap-1 bg-[#e6e6e6] rounded-xl p-1
-                                        shadow-[inset_3px_3px_6px_#c5c5c5,inset_-3px_-3px_6px_#ffffff] rounded-xl p-1">
+                                        shadow-[inset_3px_3px_6px_#c5c5c5,inset_-3px_-3px_6px_#ffffff]">
                                 <button
                                     onClick={() => setViewMode('grid')}
                                     className={`p-2 rounded-lg transition-colors ${
@@ -121,9 +121,10 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                     href={`/brands/${brand._id}`}
                                     className="group"
                                 >
-                                    <div className="bg-[#e6e6e6]  shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff] rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-violet-200 hover:-translate-y-1">
+                                    <div className="bg-[#e6e6e6] shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff] rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] hover:-translate-y-1">
                                         {/* Image Container */}
-                                        <div className="relative aspect-square p-4 sm:p-6">
+                                        <div className="relative aspect-square bg-[#e6e6e6] m-3 rounded-xl p-4 sm:p-6
+                                            shadow-[inset_4px_4px_8px_rgba(0,0,0,0.08),inset_-4px_-4px_8px_rgba(255,255,255,0.7)]">
                                             <div className="relative w-full h-full">
                                                 <Image
                                                     src={brand.image}
@@ -132,13 +133,11 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                                     className="object-contain transition-transform duration-300 group-hover:scale-110"
                                                 />
                                             </div>
-                                            {/* Hover Overlay */}
-                                            <div className="absolute inset-0 bg-violet-500/0 group-hover:bg-violet-500/10 transition-colors duration-300"></div>
                                         </div>
                                         
                                         {/* Brand Name */}
-                                        <div className="p-3 sm:p-4 text-center border-t border-gray-100">
-                                            <h3 className="font-semibold text-[#06188a] text-sm sm:text-base truncate group-hover:text-violet-600 transition-colors">
+                                        <div className="p-3 sm:p-4 text-center">
+                                            <h3 className="font-semibold text-gray-800 text-sm sm:text-base truncate group-hover:text-violet-600 transition-colors">
                                                 {brand.name}
                                             </h3>
                                             <p className="text-xs text-gray-400 mt-1 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -159,10 +158,13 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                     href={`/brands/${brand._id}`}
                                     className="group block"
                                 >
-                                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-violet-200">
+                                    <div className="bg-[#e6e6e6] rounded-2xl overflow-hidden transition-all duration-300
+                                        shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff]
+                                        hover:shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff]">
                                         <div className="flex items-center gap-4 p-4 sm:p-5">
                                             {/* Image */}
-                                            <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shrink-0 p-3">
+                                            <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-[#e6e6e6] rounded-xl shrink-0 p-3
+                                                shadow-[inset_3px_3px_6px_rgba(0,0,0,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]">
                                                 <Image
                                                     src={brand.image}
                                                     alt={brand.name}
@@ -182,7 +184,9 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                             </div>
                                             
                                             {/* Arrow */}
-                                            <div className="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-violet-100 transition-colors shrink-0">
+                                            <div className="h-10 w-10 bg-[#e6e6e6] rounded-full flex items-center justify-center shrink-0
+                                                shadow-[3px_3px_6px_#c5c5c5,-3px_-3px_6px_#ffffff]
+                                                group-hover:shadow-[inset_2px_2px_4px_#c5c5c5,inset_-2px_-2px_4px_#ffffff] transition-all">
                                                 <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 text-gray-400 group-hover:text-violet-600 transition-colors" />
                                             </div>
                                         </div>
@@ -193,11 +197,12 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                     )
                 ) : (
                     /* Empty State */
-                    <div className="text-center py-16 bg-white rounded-2xl border border-gray-100">
-                        <div className="h-20 w-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="text-center py-16 bg-[#e6e6e6] rounded-2xl shadow-[inset_5px_5px_10px_#c5c5c5,inset_-5px_-5px_10px_#ffffff]">
+                        <div className="h-20 w-20 bg-[#e6e6e6] rounded-full flex items-center justify-center mx-auto mb-4
+                            shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff]">
                             <FontAwesomeIcon icon={faTags} className="h-10 w-10 text-gray-400" />
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">No brands found</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2">No brands found</h3>
                         <p className="text-gray-500 mb-4">
                             {searchQuery 
                                 ? `No brands match "${searchQuery}"`
@@ -207,7 +212,9 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                         {searchQuery && (
                             <button
                                 onClick={() => setSearchQuery("")}
-                                className="px-5 py-2.5 bg-violet-500 text-white rounded-xl text-sm font-medium hover:bg-violet-600 transition-colors"
+                                className="px-5 py-2.5 rounded-xl text-sm font-medium text-violet-700 bg-[#e6e6e6]
+                                    shadow-[4px_4px_8px_#c5c5c5,-4px_-4px_8px_#ffffff]
+                                    active:shadow-[inset_3px_3px_6px_#c5c5c5,inset_-3px_-3px_6px_#ffffff] transition-all"
                             >
                                 Clear Search
                             </button>
@@ -219,8 +226,8 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                 {!searchQuery && brands.length > 4 && (
                     <div className="mt-12">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-1.5 h-8 bg-gradient-to-b from-violet-400 to-purple-600 rounded-full"></div>
-                            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                            <div className="w-1.5 h-8 bg-violet-500/60 rounded-full"></div>
+                            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
                                 Featured <span className="text-violet-600">Brands</span>
                             </h2>
                         </div>
@@ -232,8 +239,11 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                     href={`/brands/${brand._id}`}
                                     className="group"
                                 >
-                                    <div className="bg-gradient-to-br from-[#ede8e8] to-[#878787] rounded-2xl p-5 flex items-center gap-4 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                                        <div className="h-16 w-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shrink-0">
+                                    <div className="bg-[#e6e6e6] rounded-2xl p-5 flex items-center gap-4 transition-all duration-300
+                                        shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff]
+                                        hover:shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] hover:scale-[1.02]">
+                                        <div className="h-16 w-16 bg-[#e6e6e6] rounded-xl flex items-center justify-center shrink-0
+                                            shadow-[inset_3px_3px_6px_#c5c5c5,inset_-3px_-3px_6px_#ffffff]">
                                             <Image
                                                 src={brand.image}
                                                 alt={brand.name}
@@ -243,15 +253,16 @@ export default function AllBrandsScreen({ brands }: AllBrandsScreenProps) {
                                             />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <h3 className="font-bold text-[#0f15af] text-base truncate">
+                                            <h3 className="font-bold text-gray-800 text-base truncate">
                                                 {brand.name}
                                             </h3>
-                                            <p className="text-white text-sm mt-0.5">
+                                            <p className="text-violet-600 text-sm mt-0.5">
                                                 Shop Now
                                             </p>
                                         </div>
-                                        <div className="h-8 w-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                                            <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3 text-white" />
+                                        <div className="h-8 w-8 bg-[#e6e6e6] rounded-full flex items-center justify-center
+                                            shadow-[2px_2px_4px_#c5c5c5,-2px_-2px_4px_#ffffff]">
+                                            <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3 text-violet-600" />
                                         </div>
                                     </div>
                                 </Link>

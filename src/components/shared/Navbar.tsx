@@ -102,7 +102,7 @@ export default function Navbar() {
                     <ul className="flex items-center gap-6">
                         <li className="flex items-center gap-2 text-primary-500 hover:text-green-600">
                             <FontAwesomeIcon icon={faPhone} className="text-[#16a34a]" />
-                            <a href="tel:+18001234567" className="hover:text-primary-600 transition-colors">+1 (800) 123-4567</a>
+                            <a href="tel:+18001234567" className="hover:text-primary-600 transition-colors">+1 (700) 123-4567</a>
                         </li>
                         <li className="flex items-center gap-2">
                             <FontAwesomeIcon icon={faEnvelope} className="text-[#16a34a]" />
