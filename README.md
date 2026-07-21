@@ -9,7 +9,7 @@ A modern, full-featured e-commerce platform built with the latest web technologi
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
 
-[Live Demo](#) · [Report Bug](../../issues) · [Request Feature](../../issues)
+[🌐 Live Demo](https://fresh-cart-iota-liard.vercel.app/) · [Report Bug](../../issues) · [Request Feature](../../issues)
 
 </div>
 
@@ -40,12 +40,17 @@ The platform is designed to be flexible and scalable, with a focus on **performa
 
 ## 📸 Screenshots
 
-> Add a few screenshots or a short GIF walkthrough here so visitors can see the product before reading further.
+| Home | Cart |
+|---|---|
+| ![home](./docs/screenshots/home.png) | ![cart](./docs/screenshots/cart.png) |
 
-| Home | Cart | Profile | Wishlist | All-products
-|------|------|---------|
-| ![home](./docs/screenshots/home.png) | ![cart](./docs/screenshots/cart.png) | ![profile](./docs/screenshots/profile.png) |
- ![Wishlist](./docs/screenshots/Wishlist.png) | ![All-products](./docs/screenshots/All-products.png)
+| Profile | Wishlist |
+|---|---|
+| ![profile](./docs/screenshots/profile.png) | ![Wishlist](./docs/screenshots/Wishlist.png) |
+
+| All Products |
+|---|
+| ![All-products](./docs/screenshots/All-products.png) |
 
 ---
 
@@ -162,8 +167,8 @@ The project is organized for easy development, maintenance, and future scalabili
 ### Installation
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/maryamhamdi/Fresh-Cart.git
+cd Fresh-Cart
 npm install
 # or
 yarn install
@@ -216,6 +221,12 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## 📬 Contact
 
-**Developed by Mariam Hamdy**
+**Mariam Hamdy** — Frontend Developer
+
+<p>
+<a href="https://www.linkedin.com/in/maryam-hamdy-232763262"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+<a href="mailto:hamdymaryam874@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+<a href="https://portfolio-silk-six-4lg18xqbkq.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
+</p>
 
 Feel free to reach out via [GitHub Issues](../../issues) for bugs, questions, or feature requests.
